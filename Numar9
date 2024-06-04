@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+ifstream fin("numar9.in");
+ofstream gout("numar9.out");
+int main()
+{
+   long long n,k,a,b,x=0;
+   fin>>n>>k;
+   a=n%9;
+   b=n/9;
+   if(a!=0)
+    gout<<a;
+    x=(x*10+a)%k;
+   while(b)
+   {
+       gout<<9;
+       x=(x*10+9)%k;
+       b--;
+   }
+   gout<<endl<<x;
+}
